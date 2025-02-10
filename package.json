@@ -1,0 +1,11 @@
+{
+  "name": "mo7_script",
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {},
+  "devDependencies": {
+    "@types/bun": "^1.2.2",
+    "@types/fs-extra": "^11.0.4",
+    "axios": "^1.7.9"
+  }
+}
