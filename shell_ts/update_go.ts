@@ -122,7 +122,7 @@ fs.readFile(etc_profile, 'utf8', (err, data) => {
   const newFilCont = `${data}
 # go 环境变量
 export GOROOT=${installDir}
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
 `;
 
   console.log('开始写入环境变量');
