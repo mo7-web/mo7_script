@@ -1,4 +1,7 @@
 #!bun
+/* 
+升级和安装 golang
+*/
 import { $ } from "bun";
 import axios from "axios";
 import os from "os";

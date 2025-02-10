@@ -1,4 +1,8 @@
 #!bun
+/* 
+启动 pm2 服务
+*/
+
 import { $ } from "bun";
 
 const v2rayNPath =

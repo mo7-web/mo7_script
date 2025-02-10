@@ -1,3 +1,7 @@
+/* 
+公共函数
+*/
+
 import os from "os";
 import { $ } from "bun";
 import path from "path";

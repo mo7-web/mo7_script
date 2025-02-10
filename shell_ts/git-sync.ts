@@ -1,4 +1,8 @@
 #!bun
+
+/* 
+git 自动提交
+*/
 import { $ } from "bun";
 import { myInit } from "./common";
 
