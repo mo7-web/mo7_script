@@ -1,24 +1,23 @@
 /* 
 公共函数
 */
+import os from 'os';
+import { $ } from 'bun';
+import path from 'path';
 
-import os from "os";
-import { $ } from "bun";
-import path from "path";
-
-const GitUserName = "墨七";
-const GitEmail = "meichangliang@outlook.com";
+const GitUserName = '墨七';
+const GitEmail = 'meichangliang@outlook.com';
 
 export const pathSpace = {
-  rootPath: "",
-  distPath: "",
+  rootPath: '',
+  distPath: '',
 };
 
 const filePermissions777 = async () => {
   const sysType = os.platform();
-  if (sysType == "darwin" || sysType == "linux") {
+  if (sysType == 'darwin' || sysType == 'linux') {
     await $`chmod -R 777 ./`;
-    console.log("文件权限已重置");
+    console.log('文件权限已重置');
   }
 };
 
@@ -30,7 +29,7 @@ const SetGitLocalConfig = async () => {
     await $`git config core.filemode false`;
     // 禁用当前项目 pull.rebase
     await $`git config pull.rebase false`;
-    console.log("本地 git config 已覆盖");
+    console.log('本地 git config 已覆盖');
   } catch (error) {
     console.error(`git err code: ${error.exitCode}`);
     console.info(error.stdout.toString());
@@ -67,7 +66,7 @@ const SetGitGlobalConfig = async () => {
     // 关闭分支显示分页 显示
     await $`git config --global pager.branch false`;
 
-    console.log("git config 已覆盖");
+    console.log('git config 已覆盖');
   } catch (error) {
     console.error(`git err code: ${error.exitCode}`);
     console.info(error.stdout.toString());
@@ -88,11 +87,11 @@ export const myInit = async () => {
   await SetGitLocalConfig();
   const rootPath = process.cwd();
   if (!rootPath) {
-    console.error("rootPath is empty");
+    console.error('rootPath is empty');
     process.exit(1);
   }
-  const distPath = path.join(rootPath, "dist");
+  const distPath = path.join(rootPath, 'dist');
   pathSpace.rootPath = rootPath;
   pathSpace.distPath = distPath;
-  console.log("变量已设置");
+  console.log('变量已设置');
 };

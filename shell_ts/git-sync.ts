@@ -2,14 +2,14 @@
 /* 
 git 自动提交
 */
-import { $ } from "bun";
-import { myInit } from "./common";
+import { $ } from 'bun';
+import { myInit } from './common';
 
 await myInit();
 
 let desc = process.argv[2];
 if (!desc) {
-  desc = "sync-commit-default";
+  desc = 'sync-commit-default';
   console.warn(`git commit: ${desc} \n`);
 } else {
   console.log(`git commit: ${desc} \n`);
@@ -21,9 +21,7 @@ try {
   await $`git commit -m "${desc}"`;
   await $`git push`;
 } catch (error) {
-  if (
-    error.stdout.toString().includes("nothing to commit, working tree clean")
-  ) {
+  if (error.stdout.toString().includes('nothing to commit, working tree clean')) {
     process.exit(0);
   } else {
     console.error(`git err code: ${error.exitCode}`);
