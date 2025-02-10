@@ -4,7 +4,7 @@ import axios from "axios";
 import os from "os";
 import fs from "fs-extra";
 import { exec } from "child_process";
-import { sleep } from "./config";
+import { sleep } from "./common";
 
 const sysType = os.platform();
 

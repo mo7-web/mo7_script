@@ -11,10 +11,12 @@ func main() {
 	// 设置静态文件目录
 	pwd, _ := os.Getwd()
 	StaticDir := path.Join(pwd, "/dist")
+
 	fs := http.FileServer(http.Dir(StaticDir))
 
-	// 启动服务器
+	// 设置服务器端口
 	prot := "9988"
+
 	HostPath := "0.0.0.0:" + prot
 	OpenHost := "http://localhost:" + prot
 

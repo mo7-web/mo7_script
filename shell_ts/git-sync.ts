@@ -1,6 +1,6 @@
 #!bun
 import { $ } from "bun";
-import { myInit } from "./config";
+import { myInit } from "./common";
 
 await myInit();
 
