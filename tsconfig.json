@@ -6,6 +6,6 @@
     "allowJs": true,
     "outDir": "./dist"
   },
-  "include": ["shell_ts/**/*"],
+  "include": ["ts_shell/**/*"],
   "exclude": ["node_modules", "dist"]
 }
