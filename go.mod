@@ -1,3 +1,4 @@
-module mo7-blog
+module mo7_script
 
-go 1.23
+go 1.24
+ 

@@ -5,9 +5,12 @@ import (
 	"net/http"
 	"os"
 	"path"
+
+	"mo7_script/shell_go/lib"
 )
 
-func main() {
+func StartServe() {
+	lib.Test()
 	// 设置静态文件目录
 	pwd, _ := os.Getwd()
 	StaticDir := path.Join(pwd, "/dist")
